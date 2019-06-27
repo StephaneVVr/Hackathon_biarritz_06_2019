@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends React.Component {
   render() {
@@ -22,79 +23,25 @@ export default class Navbar extends React.Component {
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">
-                  Home <span class="sr-only">(current)</span>
+                <a class="nav-link">
+                  <Link to="/">Home</Link>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Matches History
+                <a class="nav-link">
+                  <Link to="/Matches">Matches History</Link>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Campuses
+                <a class="nav-link">
+                  <Link to= "/CampusList">Campuses</Link> 
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item">
                 <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Student List
+                  class="nav-link">
+                    <Link to="/Wilders">Wilders List</Link>
                 </a>
-                <div
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <a class="dropdown-item" href="#">
-                    Biarritz
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Berlin
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Bordeaux
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Bucarest
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    London
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Madrid
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Brussels
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Lisbon
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Paris
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Marseille
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Lille
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Tours
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Toulouse
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Strasbourg
-                  </a>
-                </div>
               </li>
             </ul>
           </div>
