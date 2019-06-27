@@ -1,22 +1,40 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem, Input } from 'reactstrap';
-import * as campusData from './campuses.json';
+import axios from 'axios';
+
+// Component for listed Campuses
 
 class CampusList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			search: ''
+			search: '',
+			campus: []
 		};
 	}
+
+	// Call API with Axios in /campuses root and edit the campus state with campuses datas
+
+	componentDidMount() {
+		axios.get('https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses').then(response => {
+			this.setState({
+				campus: response.data
+			});
+		});
+		console.log(this.state.campus);
+	}
+
+	// Make a method for searchbar
 
 	updateSearch(event) {
 		this.setState({ search: event.target.value.substr(0, 20) });
 	}
 
 	render() {
-		let filteredcampus = campusData.data.filter(campuseSearch => {
+		// Make a searchbar
+
+		let filteredCampus = this.state.campus.filter(campuseSearch => {
 			return campuseSearch.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
 		});
 		const { buttonLabel } = this.props;
@@ -31,11 +49,10 @@ class CampusList extends Component {
 					placeholder='Recherche'
 				/>
 				<ListGroup className='mt-2'>
-					{filteredcampus.map(campus => (
+					{filteredCampus.map(campus => (
 						<div>
 							<Link to={`/campusList/${campus.name}`} style={{ textDecoration: 'none', color: 'black' }}>
 								{' '}
-								*/}
 								<ListGroupItem>
 									{buttonLabel} {campus.name}
 								</ListGroupItem>
