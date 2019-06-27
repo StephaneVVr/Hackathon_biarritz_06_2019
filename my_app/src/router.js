@@ -4,6 +4,7 @@ import { Navbar } from 'reactstrap';
 import CampusPage from './campusPage';
 import CampusList from './campusList';
 import HomePage from './homePage';
+import Matches from './Matches';
 
 const RouterFile = () => {
 	return (
@@ -27,6 +28,8 @@ const RouterFile = () => {
 					<Route exact path='/' component={HomePage} />
 					<Route exact path='/CampusList' component={CampusList} />
 					<Route exact path='/CampusList/:campusName' component={CampusPage} />
+					<Route exact path='/Matches' component={Matches} />
+
 				</Switch>
 			</Router>
 		</div>

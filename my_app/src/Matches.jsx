@@ -3,11 +3,11 @@ import { Table } from "reactstrap";
 import Match from "./Match";
 import Layout from "./Layout";
 
-export default class Example extends React.Component {
+export default class Matches extends React.Component {
   render() {
     return (
       <Layout>
-        <Table borderless>
+        <Table borderless responsive>
           <thead>
             <tr>
               <th>Date</th>
