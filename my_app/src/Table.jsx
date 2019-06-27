@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
 
-export default class Table extends React.Component {
+export default class Tablee extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
@@ -22,6 +22,7 @@ export default class Table extends React.Component {
                   <tr key={i}>
                      <th scope="row">{i + 1}</th>
                      <td>{campus.name}</td>
+                     {/* Score must be get from eloalgo */}
                      <td>{campus.score}</td>
                   </tr>
                );
