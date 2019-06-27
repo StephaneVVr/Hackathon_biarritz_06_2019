@@ -5,8 +5,8 @@ export default class Navbar extends React.Component {
     return (
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-          <a class="navbar-brand" href="#">
-            Navbar
+          <a class="navbar-brand" href="/">
+            ELO-Wild
           </a>
           <button
             class="navbar-toggler"
@@ -28,12 +28,12 @@ export default class Navbar extends React.Component {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Features
+                  Matches History
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  Pricing
+                  Campuses
                 </a>
               </li>
               <li class="nav-item dropdown">
@@ -46,20 +46,53 @@ export default class Navbar extends React.Component {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Dropdown link
+                  Student List
                 </a>
                 <div
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <a class="dropdown-item" href="#">
-                    Action
+                    Biarritz
                   </a>
                   <a class="dropdown-item" href="#">
-                    Another action
+                    Berlin
                   </a>
                   <a class="dropdown-item" href="#">
-                    Something else here
+                    Bordeaux
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Bucarest
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    London
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Madrid
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Brussels
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Lisbon
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Paris
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Marseille
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Lille
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Tours
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Toulouse
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Strasbourg
                   </a>
                 </div>
               </li>
