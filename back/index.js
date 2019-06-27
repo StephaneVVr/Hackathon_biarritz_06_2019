@@ -6,6 +6,7 @@ const port = 8000;
 const campuses = require("./campuses.json");
 const wilders = require("./wilders.json");
 const matches = require("./matches.json");
+const elo = require("./elo")
 
 // Routes GET
 
@@ -25,6 +26,13 @@ app.get("/wilders", (req, res) => {
 
 app.get("/matches", (req, res) => {
   res.status(200).send({ matches });
+});
+
+app.get("/ranking", (req, res) => {
+  const response = elo();
+  let eloRankingObject = {};
+  response.forEach((v, k) => (eloRankingObject[k] = v));
+  res.send(eloRankingObject);
 });
 
 // Listening server on port 8000
