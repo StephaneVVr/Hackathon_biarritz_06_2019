@@ -19,15 +19,13 @@ class CampusList extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        "https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses"
-      )
+      .get("http://localhost:8000/campuses")
       .then(response => {
         this.setState({
-          campus: response.data
+          campus: response.data.campuses
         });
-      });
-    console.log(this.state.campus);
+      })
+      .catch(err => console.log(err));
   }
 
   // Make a method for searchbar
@@ -38,6 +36,7 @@ class CampusList extends Component {
 
   render() {
     // Make a searchbar
+    console.log(this.state.campus);
 
     let filteredCampus = this.state.campus.filter(campuseSearch => {
       return (

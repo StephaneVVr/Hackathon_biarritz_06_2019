@@ -21,15 +21,13 @@ class WilderList extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        "https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/wilders"
-      )
+      .get("http://localhost:8000/wilders")
       .then(response => {
         this.setState({
-          wilder: response.data
+          wilder: response.data.wilders
         });
-      });
-    console.log(this.state.wilder);
+      })
+      .catch(err => console.log(err));
   }
 
   // Make a method for searchbar
