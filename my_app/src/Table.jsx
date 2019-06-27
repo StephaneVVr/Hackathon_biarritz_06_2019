@@ -8,15 +8,8 @@ export default class Table extends React.Component {
          campuses: []
       };
    }
-   // Rafraichissement du tableau (timer 100 ms)
+   // get data from API/campuses
    componentDidMount() {
-      this.tableRefresh = setInterval(() => this.refresh(), 250);
-   }
-   componentWillUnmount() {
-      clearInterval(this.tableRefresh);
-   }
-   // Récupération des campus (mapping)
-   refresh() {
       Axios.get("https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses").then(response => {
          this.setState({ campuses: response.data });
       });

@@ -22,7 +22,6 @@ export default class Match extends React.Component {
         {this.state.matches.map((match, i) => {
           return (
             <tr key={i}>
-              <th scope="row">{i + 1}</th>
               <td>{match.isoDate}</td>
               <td>{match.homeTeam}</td>
               <td>{match.awayTeam}</td>
