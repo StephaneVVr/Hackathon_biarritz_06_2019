@@ -29,6 +29,11 @@ export default class Navbar extends React.Component {
               </li>
               <li class="nav-item">
                 <a class="nav-link">
+                  <Link to="/Leaderboard">Leaderboard</Link>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">
                   <Link to="/Matches">Matches History</Link>
                 </a>
               </li>
