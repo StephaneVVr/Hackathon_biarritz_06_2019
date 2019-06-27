@@ -3,9 +3,13 @@
 const express = require("express");
 const app = express();
 const port = 8000;
+const cors = require("cors");
 const campuses = require("./campuses.json");
 const wilders = require("./wilders.json");
 const matches = require("./matches.json");
+const elo = require("./elo");
+
+app.use(cors());
 
 // Routes GET
 
@@ -28,6 +32,13 @@ app.get("/matches", (req, res) => {
 });
 
 // Listening server on port 8000
+
+app.get("/ranking", (req, res) => {
+  const response = elo();
+  let eloRankingObject = {};
+  response.forEach((v, k) => (eloRankingObject[k] = v));
+  res.send(eloRankingObject);
+});
 
 app.listen(port, err => {
   if (err) {
