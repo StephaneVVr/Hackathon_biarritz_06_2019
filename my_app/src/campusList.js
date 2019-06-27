@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem, Input } from 'reactstrap';
 import * as campusData from './campuses.json';
 
@@ -33,11 +33,13 @@ class CampusList extends Component {
 				<ListGroup className='mt-2'>
 					{filteredcampus.map(campus => (
 						<div>
-							{/* <Link to={`/${campus.name}`} style={{ textDecoration: 'none', color: 'black' }}> */}
-							<ListGroupItem>
-								{buttonLabel} {campus.name}
-							</ListGroupItem>
-							{/* </Link> */}
+							<Link to={`/campusList/${campus.name}`} style={{ textDecoration: 'none', color: 'black' }}>
+								{' '}
+								*/}
+								<ListGroupItem>
+									{buttonLabel} {campus.name}
+								</ListGroupItem>
+							</Link>
 						</div>
 					))}
 				</ListGroup>
