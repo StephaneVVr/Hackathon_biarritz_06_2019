@@ -1,14 +1,19 @@
 import React from "react";
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
-export default class Layout extends React.Component {
-  render() {
-    return (
-      <div>
-        <Navbar/>
-        <Footer/>
+const Layout = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      <div
+        className="container-fluid"
+        style={{ justifyContent: "center", alignItems: "center" }}
+      >
+        {children}
       </div>
-    );
-  }
-}
+      <Footer />
+    </>
+  );
+};
+export default Layout;
