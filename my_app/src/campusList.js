@@ -28,11 +28,15 @@ class CampusList extends Component {
       });
   }
 
+  // Make a method for searchbar
+
   updateSearch(event) {
     this.setState({ search: event.target.value.substr(0, 20) });
   }
 
   render() {
+    // Make a searchbar
+
     let filteredCampus = this.state.campus.filter(campuseSearch => {
       return (
         campuseSearch.name
