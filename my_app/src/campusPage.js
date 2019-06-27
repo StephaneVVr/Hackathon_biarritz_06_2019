@@ -18,9 +18,6 @@ class CampusPage extends Component {
                     firstname: "",
                     lastname: "",
                 }
-
-
-
             }]
         };
 
