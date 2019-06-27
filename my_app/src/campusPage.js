@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import * as campusData from './campuses.json';
 import { Redirect } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import axios from 'axios';

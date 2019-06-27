@@ -6,6 +6,7 @@ import CampusList from './campusList';
 import HomePage from './homePage';
 import Matches from './Matches';
 import Tables from './Tables';
+import WilderList from './wilderList'
 
 const RouterFile = () => {
 	return (
@@ -31,6 +32,7 @@ const RouterFile = () => {
 					<Route exact path='/CampusList/:campusName' component={CampusPage} />
 					<Route exact path='/Matches' component={Matches} />
 					<Route exact path='/Leaderboard' component={Tables} />
+					<Route exact path='/wildersList' component={WilderList} />
 				</Switch>
 			</Router>
 		</div>
