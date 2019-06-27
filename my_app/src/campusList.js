@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem, Input } from 'reactstrap';
 import axios from 'axios';
+import Layout from "./Layout.jsx";
 
 // Component for listed Campuses
 
@@ -39,6 +40,7 @@ class CampusList extends Component {
 		});
 		const { buttonLabel } = this.props;
 		return (
+      <Layout>
 			<div className='mt-3'>
 				<h4 style={{ textAlign: 'center' }}>Campus List</h4>
 				<Input
@@ -61,6 +63,7 @@ class CampusList extends Component {
 					))}
 				</ListGroup>
 			</div>
+      </Layout>
 		);
 	}
 }
