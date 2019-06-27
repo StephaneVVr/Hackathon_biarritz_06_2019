@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { Link } from 'react-router-dom';
 import { ListGroup, ListGroupItem, Input } from 'reactstrap';
 import * as campusData from './campuses.json';
+import Layout from './Layout.jsx';
 
 class CampusList extends Component {
 	constructor(props) {
@@ -21,6 +22,8 @@ class CampusList extends Component {
 		});
 		const { buttonLabel } = this.props;
 		return (
+			<Layout>
+
 			<div className='mt-3'>
 				<h4 style={{ textAlign: 'center' }}>Campus List</h4>
 				<Input
@@ -29,7 +32,7 @@ class CampusList extends Component {
 					onChange={this.updateSearch.bind(this)}
 					className='col-7'
 					placeholder='Recherche'
-				/>
+					/>
 				<ListGroup className='mt-2'>
 					{filteredcampus.map(campus => (
 						<div>
@@ -42,6 +45,7 @@ class CampusList extends Component {
 					))}
 				</ListGroup>
 			</div>
+					</Layout>
 		);
 	}
 }
