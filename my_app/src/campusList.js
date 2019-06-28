@@ -64,7 +64,6 @@ class CampusList extends Component {
                   to={`/campusList/${campus.name}`}
                   style={{ textDecoration: "none", color: "black" }}
                 >
-                  {" "}
                   <ListGroupItem>
                     {buttonLabel} {campus.name}
                   </ListGroupItem>

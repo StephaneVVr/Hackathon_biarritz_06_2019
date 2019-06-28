@@ -5,11 +5,11 @@ import { Container, Col, Table } from "reactstrap";
 
 export default function Tables() {
   return (
-    <div>
+    <div className="mt-3">
       <Layout>
         <Container>
           <Col md={{ size: 6, offset: 3 }}>
-          <h4>LEADERBOARD</h4>
+          <h4 style={{ textAlign: "center" }}>Leaderboard</h4>
           <Table responsive dark>
             <thead>
               <tr>
