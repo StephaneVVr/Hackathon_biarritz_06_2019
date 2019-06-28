@@ -1,40 +1,38 @@
-import React from "react";
-import Axios from "axios";
-import Ranking from "./ranking";
+import React from 'react';
+import Axios from 'axios';
+import RankingTest from './rankingTest';
 
 export default class Tablee extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      campuses: []
-    };
-  }
-  // get data from API/campuses
-  componentDidMount() {
-    Axios.get(
-      "https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses"
-    )
-      .then(response => {
-        this.setState({ campuses: response.data });
-      })
-      .catch(err => console.log(err));
-  }
-  render() {
-    return (
-      <>
-        {this.state.campuses.map((campus, i) => {
-          return (
-            <tr key={i}>
-              <th scope="row">{i + 1}</th>
-              <td>{campus.name}</td>
-              {/* Score must be get from eloalgo */}
-              <td>
-                <Ranking />
-              </td>
-            </tr>
-          );
-        })}
-      </>
-    );
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			campuses: []
+		};
+	}
+	// get data from API/campuses
+	componentDidMount() {
+		Axios.get('https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses')
+			.then(response => {
+				this.setState({ campuses: response.data });
+			})
+			.catch(err => console.log(err));
+	}
+	render() {
+		return (
+			<>
+				{this.state.campuses.map((campus, i) => {
+					return (
+						<tr key={i}>
+							<th scope='row'>{i + 1}</th>
+							<td>{campus.name}</td>
+							{/* Score must be get from eloalgo */}
+							<td>
+								<RankingTest />
+							</td>
+						</tr>
+					);
+				})}
+			</>
+		);
+	}
 }

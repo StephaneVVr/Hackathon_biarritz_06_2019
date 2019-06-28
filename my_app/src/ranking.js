@@ -5,7 +5,23 @@ class Ranking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dataRank: []
+      dataRank: [{
+        ber: "",
+        bia: "",
+        bor: "",
+        bru: "",
+        buc: "",
+        lil: "",
+        lis: "",
+        lon: "",
+        mad: "",
+        mar: "",
+        par: "",
+        stra: "",
+        toul: "",
+        tour: "",
+      }
+      ]
     };
   }
 
@@ -15,15 +31,15 @@ class Ranking extends Component {
         this.setState({ dataRank: response.data });
       })
       .catch(err => console.log(err));
+
   };
+
 
   render() {
     console.log(this.state.dataRank);
     return (
       <div>
-        {this.state.dataRank.map(rank => {
-          return rank;
-        })}
+        `le classement des campus ${this.state.dataRank}`
       </div>
     );
   }
