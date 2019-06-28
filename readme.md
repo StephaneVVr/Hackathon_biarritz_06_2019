@@ -50,7 +50,6 @@ Permettre à un utilisateur de visualiser  le classement ELO de chaque campus,
 Permettre à un utilisateur de consulter la liste des élèves de chaque campus.
 
 ## Team
-[I'm an inline-style link](https://www.google.com)
 
 [Guilhem Demont](https://github.com/Guilhem64), 
 [Fabien Goyhex](https://github.com/FabienGOYHEX), 
