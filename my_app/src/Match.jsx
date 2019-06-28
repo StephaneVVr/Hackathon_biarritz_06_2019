@@ -10,10 +10,8 @@ export default class Match extends React.Component {
   }
   // get matches data from api
   componentDidMount() {
-    Axios.get(
-      "https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/matches"
-    ).then(response => {
-      this.setState({ matches: response.data });
+    Axios.get("http://localhost:8000/matches").then(response => {
+      this.setState({ matches: response.data.matches });
     });
   }
   render() {
