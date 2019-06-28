@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <div
         className="container-fluid"
-        style={{ justifyContent: "center", alignItems: "center" }}
+        style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: "12vh" }}
       >
         {children}
       </div>
