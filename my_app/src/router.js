@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import CampusPage from './campusPage';
 import CampusList from './campusList';
-import HomePage from './homePage';
 import Matches from './Matches';
 import WilderList from './wilderList'
 import Ranking from './Ranking';
@@ -12,7 +11,7 @@ const RouterFile = () => {
 		<div>
 			<Router>
 				<Switch>
-					<Route exact path='/' component={HomePage} />
+					<Route exact path='/' component={CampusList} />
 					<Route exact path='/CampusList' component={CampusList} />
 					<Route exact path='/CampusList/:campusName' component={CampusPage} />
 					<Route exact path='/Matches' component={Matches} />
