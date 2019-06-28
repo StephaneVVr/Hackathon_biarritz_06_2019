@@ -21,10 +21,10 @@ class WilderList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8000/wilders")
+      .get("https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/wilders")
       .then(response => {
         this.setState({
-          wilder: response.data.wilders
+          wilder: response.data
         });
       })
       .catch(err => console.log(err));

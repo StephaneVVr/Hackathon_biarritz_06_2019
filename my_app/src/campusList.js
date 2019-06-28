@@ -19,10 +19,10 @@ class CampusList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8000/campuses")
+      .get("https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses")
       .then(response => {
         this.setState({
-          campus: response.data.campuses
+          campus: response.data
         });
       })
       .catch(err => console.log(err));
@@ -59,7 +59,7 @@ class CampusList extends Component {
           />
           <ListGroup className="mt-2">
             {filteredCampus.map((campus) => (
-              <div  key={campus.uid}>
+              <div key={campus.uid}>
                 <Link
                   to={`/campusList/${campus.name}`}
                   style={{ textDecoration: "none", color: "black" }}
