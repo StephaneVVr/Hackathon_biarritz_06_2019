@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button, Card, Container, Col } from "reactstrap";
 import axios from "axios";
 
 class CampusPage extends Component {
@@ -59,33 +59,33 @@ class CampusPage extends Component {
     const { currentCampus } = this.state;
     return (
       <div>
-        {this.renderRedirect()}
-        {currentCampus && (
-          <div className="mt-3 d-flex flex-column align-items-center">
-            <h4>Nom du Campus : {currentCampus.name}</h4>
-            <p>Ville : {currentCampus.city}</p>
-            <p> Pays : {currentCampus.country}</p>
-            <p> Identifiant : {currentCampus.uid}</p>
-            <p> Date de création : {currentCampus.creation}</p>
-            {
-              //<p>{currentCampus.manager.firstname}</p>
-              // <p>{currentCampus.manager.lastname}</p>}
-
-              <div className="d-flex col-11">
-                <Button outline color="danger" onClick={this.setRedirect}>
-                  Retour
-                </Button>
-              </div>
-
-              /* <Popup>
-							<ul>
-								<li>nom: {currentCampus.name}</li>
-								<li>adresse: {currentCampus.city}</li>
-							</ul>
-						</Popup> */
-            }
-          </div>
-        )}
+        <Container>
+          <Col md={{ size: 6, offset: 3 }}>
+            <Card>
+              {this.renderRedirect()}
+              {currentCampus && (
+                <div className="mt-3 d-flex flex-column align-items-center">
+                  <h4 className="card-header">
+                    Nom du Campus : {currentCampus.name}
+                  </h4>
+                  <p>Ville : {currentCampus.city}</p>
+                  <p> Pays : {currentCampus.country}</p>
+                  <p> Identifiant : {currentCampus.uid}</p>
+                  <p> Date de création : {currentCampus.creation}</p>
+                  {
+                    //<p>{currentCampus.manager.firstname}</p>
+                    // <p>{currentCampus.manager.lastname}</p>}
+                    <div className="d-flex justify-content-center col-11">
+                      <Button outline color="danger" onClick={this.setRedirect}>
+                        Retour
+                      </Button>
+                    </div>
+                  }
+                </div>
+              )}
+            </Card>
+          </Col>
+        </Container>
       </div>
     );
   }

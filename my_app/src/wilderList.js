@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { ListGroup, ListGroupItem, Input } from "reactstrap";
 import axios from "axios";
 import Layout from "./Layout.jsx";
-import { Button } from "reactstrap";
-import { Redirect } from "react-router-dom";
+
 
 // Component for listed Wilders
 
@@ -35,16 +34,7 @@ class WilderList extends Component {
   updateSearch(event) {
     this.setState({ search: event.target.value.substr(0, 20) });
   }
-  setRedirect = () => {
-    this.setState({
-      redirect: true
-    });
-  };
-  renderRedirect = () => {
-    if (this.state.redirect) {
-      return <Redirect exact to="/" />;
-    }
-  };
+
   render() {
     // Make a searchbar
 
@@ -68,9 +58,6 @@ class WilderList extends Component {
             placeholder="Recherche"
           />
           <div className="d-flex col-11">
-            <Button outline color="danger" onClick={this.setRedirect}>
-              Retour
-            </Button>
           </div>
           <ListGroup className="mt-2">
             {filteredWilders.map((wilder, i) => (
