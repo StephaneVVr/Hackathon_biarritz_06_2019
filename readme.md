@@ -16,7 +16,13 @@ La Wild Code School vient de créer, il y a à peine quelques mois, la première
 
 > install npm packages
 
+```
+$ cd back
 $ npm install
+$ cd ../my-app
+$ npm install
+```
+
 
 
 ### Prerequisites
@@ -27,11 +33,11 @@ $ npm install
 
 -- Back-end (file /back)
 
-$ node index.js
+`$ node index.js`
 
 -- Front-end (file /my_app)
 
-$ npm start
+`$ npm start`
 
 ## Built With
 
@@ -51,10 +57,10 @@ Permettre à un utilisateur de consulter la liste des élèves de chaque campus.
 
 ## Team
 
-Guilhem Demont : https://github.com/Guilhem64
-Fabien Goyhex : https://github.com/FabienGOYHEX
-Guillaume Riberoux : https://github.com/Muxwcs
-Stéphane Vivier : https://github.com/StephaneVVr
+[Guilhem Demont](https://github.com/Guilhem64), 
+[Fabien Goyhex](https://github.com/FabienGOYHEX), 
+[Guillaume Riberoux](https://github.com/Muxwcs),
+[Stéphane Vivier](https://github.com/StephaneVVr)
 
 ## Donations 
 

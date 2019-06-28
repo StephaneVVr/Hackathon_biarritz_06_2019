@@ -1,7 +1,8 @@
-import React from "react";
-import Tablee from "./Table";
-import Layout from "./Layout";
-import { Container, Col, Table } from "reactstrap";
+import React from 'react';
+import Tablee from './Table';
+import Layout from './Layout';
+import { Container, Col, Table } from 'reactstrap';
+import RankingTest from './rankingTest';
 
 export default function Tables() {
   return (
@@ -31,4 +32,5 @@ export default function Tables() {
       </Layout>
     </div>
   );
+
 }

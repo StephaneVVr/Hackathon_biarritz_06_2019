@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+// import { clearScreenDown } from "readline";
 
 export default class Match extends React.Component {
   constructor(props) {
@@ -10,9 +11,11 @@ export default class Match extends React.Component {
   }
   // get matches data from api
   componentDidMount() {
-    Axios.get("http://localhost:8000/matches").then(response => {
-      this.setState({ matches: response.data.matches });
-    });
+    Axios.get("http://localhost:8000/matches")
+      .then(response => {
+        this.setState({ matches: response.data.matches });
+      })
+      .catch(err => console.log(err));
   }
   render() {
     return (
