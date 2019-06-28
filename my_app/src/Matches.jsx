@@ -9,7 +9,7 @@ export default class Matches extends React.Component {
       <Layout>
         <Container>
           <Col>
-            <Table borderless responsive>
+            <Table borderless>
               <thead>
                 <tr>
                   <th>Date</th>
