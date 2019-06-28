@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import Ranking from "./ranking";
 
 export default class Tablee extends React.Component {
   constructor(props) {
@@ -12,9 +13,11 @@ export default class Tablee extends React.Component {
   componentDidMount() {
     Axios.get(
       "https://us-central1-rc-league.cloudfunctions.net/wildcodeschool/campuses"
-    ).then(response => {
-      this.setState({ campuses: response.data });
-    });
+    )
+      .then(response => {
+        this.setState({ campuses: response.data });
+      })
+      .catch(err => console.log(err));
   }
   render() {
     return (
@@ -25,7 +28,9 @@ export default class Tablee extends React.Component {
               <th scope="row">{i + 1}</th>
               <td>{campus.name}</td>
               {/* Score must be get from eloalgo */}
-              <td>{campus.score}</td>
+              <td>
+                <Ranking />
+              </td>
             </tr>
           );
         })}
