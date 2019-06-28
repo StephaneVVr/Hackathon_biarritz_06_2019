@@ -23,19 +23,29 @@ export default class Navbar extends React.Component {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <Link to="/">Home</Link>
+                <div>
+                  <Link to="/">Home</Link>
+                </div>
               </li>
               <li className="nav-item">
-                <Link to="/Leaderboard">Leaderboard</Link>
+                <div>
+                  <Link to="/Leaderboard">Leaderboard</Link>
+                </div>
               </li>
               <li className="nav-item">
-                <Link to="/Matches">Matches History</Link>
+                <div>
+                  <Link to="/Matches">Matches History</Link>
+                </div>
               </li>
               <li className="nav-item">
-                <Link to="/CampusList">Campuses</Link>
+                <div>
+                  <Link to="/CampusList">Campuses</Link>
+                </div>
               </li>
               <li className="nav-item">
-                <Link to="/WildersList">Wilders List</Link>
+                <div>
+                  <Link to="/WildersList">Wilders List</Link>
+                </div>
               </li>
             </ul>
           </div>
