@@ -1,6 +1,5 @@
 import React from 'react';
 import Axios from 'axios';
-import RankingTest from './rankingTest';
 
 export default class Tablee extends React.Component {
 	constructor(props) {
@@ -26,9 +25,7 @@ export default class Tablee extends React.Component {
 							<th scope='row'>{i + 1}</th>
 							<td>{campus.name}</td>
 							{/* Score must be get from eloalgo */}
-							<td>
-								<RankingTest />
-							</td>
+							<td>1000</td>
 						</tr>
 					);
 				})}

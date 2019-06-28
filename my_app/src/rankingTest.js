@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Layout from './Layout';
+import { Container, Col, Table } from 'reactstrap';
 
 class RankingTest extends Component {
     constructor(props) {
@@ -44,25 +46,86 @@ class RankingTest extends Component {
     render() {
         return (
             <div>
-                <div className="mt-3 d-flex flex-column align-items-center">
-                    <p>Berlin : {this.state.campus.ber}</p>
-                    <p> Biarritz : {this.state.campus.bia}</p>
-                    <p> Bordeaux : {this.state.campus.bor}</p>
-                    <p> Bruxelle: {this.state.campus.bru}</p>
-                    <p>Bucarest: {this.state.campus.buc}</p>
-                    <p> Biarritz : {this.state.campus.lil}</p>
-                    <p> Lisbonne : {this.state.campus.lis}</p>
-                    <p> Londres : {this.state.campus.lon}</p>
-                    <p> Madrid: {this.state.campus.mad}</p>
-                    <p> Marseille: {this.state.campus.mar}</p>
-                    <p>Paris : {this.state.campus.par}</p>
-                    <p> Strasbourg : {this.state.campus.stra}</p>
-                    <p> Toulouse : {this.state.campus.toul}</p>
-                    <p> tour : {this.state.campus.tour}</p>
+                <Layout>
+                    <Container>
+                        <Col md={{ size: 6, offset: 3 }}>
+                            <h4>LEADERBOARD</h4>
+                            <Table responsive dark>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h5>Campus</h5>
+                                        </th>
+                                        <th>
+                                            <h5>Score</h5>
+                                        </th>
+                                    </tr>
+                                </thead>
 
+                                <tr>
 
-                </div>
+                                    <td>Berlin </td>
+                                    <td> {this.state.campus.ber}</td>
+                                </tr>
+                                <tr>
+                                    <td> Biarritz :</td>
+                                    <td> {this.state.campus.bia}</td>
+                                </tr>
+                                <tr>
+                                    <td> Bordeaux : </td>
+                                    <td> {this.state.campus.bor}</td>
+                                </tr>
+                                <tr>
+                                    <td> Bruxelle: </td>
+                                    <td> {this.state.campus.bru}</td>
+                                </tr>
+                                <tr>
+                                    <td>Bucarest:</td>
+                                    <td>{this.state.campus.buc}</td>
+                                </tr>
+                                <tr>
+                                    <td> Biarritz : </td>
+                                    <td>{this.state.campus.lil}</td>
+                                </tr>
+                                <tr>
+                                    <td> Lisbonne : </td>
+                                    <td> {this.state.campus.lis}</td>
+                                </tr>
+                                <tr>
+                                    <td> Londres : </td>
+                                    <td> {this.state.campus.lon}</td>
+                                </tr>
+                                <tr>
+                                    <td> Madrid: </td>
+                                    <td> {this.state.campus.mad}</td>
+                                </tr>
+                                <tr>
+                                    <td> Marseille:</td>
+                                    <td> {this.state.campus.mar}</td>
+                                </tr>
+                                <tr>
+                                    <td>Paris : </td>
+                                    <td>{this.state.campus.par}</td>
+                                </tr>
+                                <tr>
+                                    <td> Strasbourg : </td>
+                                    <td> {this.state.campus.stra}</td>
+                                </tr>
+                                <tr>
+                                    <td> Toulouse : </td>
+                                    <td> {this.state.campus.toul}</td>
+                                </tr>
+                                <tr>
+                                    <td> tour : </td>
+                                    <td> {this.state.campus.tour}</td>
+                                </tr>
+                            </Table>
+                        </Col>
+                    </Container>
+                </Layout>
+
             </div>
+
         );
     }
 }
