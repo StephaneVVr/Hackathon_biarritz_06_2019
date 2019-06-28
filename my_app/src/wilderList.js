@@ -73,8 +73,8 @@ class WilderList extends Component {
             </Button>
           </div>
           <ListGroup className="mt-2">
-            {filteredWilders.map(wilder => (
-              <div>
+            {filteredWilders.map((wilder, i) => (
+              <div key={i}>
                 <ListGroupItem>
                   {buttonLabel} Wilder : {wilder.firstname} {wilder.lastname}{" "}
                   Campus de : {wilder.campus}

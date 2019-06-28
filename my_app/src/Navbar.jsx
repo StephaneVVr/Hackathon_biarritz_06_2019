@@ -1,56 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends React.Component {
-	render() {
-		return (
-			<div>
-				<nav class='navbar navbar-expand-lg navbar-light bg-dark'>
-					<a class='navbar-brand' href='/'>
-						ELO-Wild
-					</a>
-					<button
-						class='navbar-toggler'
-						type='button'
-						data-toggle='collapse'
-						data-target='#navbarNavDropdown'
-						aria-controls='navbarNavDropdown'
-						aria-expanded='false'
-						aria-label='Toggle navigation'
-					>
-						<span class='navbar-toggler-icon' />
-					</button>
-					<div class='collapse navbar-collapse' id='navbarNavDropdown'>
-						<ul class='navbar-nav'>
-							<li class='nav-item active'>
-								<a class='nav-link'>
-									<Link to='/'>Home</Link>
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a class='nav-link'>
-									<Link to='/Leaderboard'>Leaderboard</Link>
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a class='nav-link'>
-									<Link to='/Matches'>Matches History</Link>
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a class='nav-link'>
-									<Link to='/CampusList'>Campuses</Link>
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a class='nav-link'>
-									<Link to='/WildersList'>Wilders List</Link>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+          <a className="navbar-brand" href="/">
+            ELO-Wild
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+              <li className="nav-item active">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Leaderboard">Leaderboard</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Matches">Matches History</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/CampusList">Campuses</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/WildersList">Wilders List</Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    );
+  }
 }

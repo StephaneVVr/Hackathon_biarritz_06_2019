@@ -58,13 +58,12 @@ class CampusList extends Component {
             placeholder="Recherche"
           />
           <ListGroup className="mt-2">
-            {filteredCampus.map(campus => (
-              <div>
+            {filteredCampus.map((campus) => (
+              <div  key={campus.uid}>
                 <Link
                   to={`/campusList/${campus.name}`}
                   style={{ textDecoration: "none", color: "black" }}
                 >
-                  {" "}
                   <ListGroupItem>
                     {buttonLabel} {campus.name}
                   </ListGroupItem>

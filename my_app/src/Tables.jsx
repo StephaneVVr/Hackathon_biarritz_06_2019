@@ -5,30 +5,32 @@ import { Container, Col, Table } from 'reactstrap';
 import RankingTest from './rankingTest';
 
 export default function Tables() {
-	return (
-		<div>
-			<Layout>
-				<Container>
-					<Col md={{ size: 6, offset: 3 }}>
-						<h4>LEADERBOARD</h4>
-						<Table responsive dark>
-							<thead>
-								<tr>
-									<th>
-										<h5>Campus</h5>
-									</th>
-									<th>
-										<h5>Score</h5>
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<RankingTest />
-							</tbody>
-						</Table>
-					</Col>
-				</Container>
-			</Layout>
-		</div>
-	);
+  return (
+    <div className="mt-3">
+      <Layout>
+        <Container>
+          <Col md={{ size: 6, offset: 3 }}>
+          <h4 style={{ textAlign: "center" }}>Leaderboard</h4>
+          <Table responsive dark>
+            <thead>
+              <tr>
+                <th />
+                <th>
+                  <h5>Campus</h5>
+                </th>
+                <th>
+                  <h5>Score</h5>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <Tablee />
+            </tbody>
+          </Table>
+          </Col>
+        </Container>
+      </Layout>
+    </div>
+  );
+
 }
